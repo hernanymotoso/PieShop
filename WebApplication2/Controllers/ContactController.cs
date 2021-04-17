@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace WebApplication2.Controllers
 {
-    public class ContactController  : Controller
+    public class ContactController : Controller
     {
-        
+        // GET: /<controller>/
+        public IActionResult Index()
+        {
+
+
+            return View();
+
+        }
     }
 }
