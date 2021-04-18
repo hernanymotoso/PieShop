@@ -10,16 +10,31 @@
             <th>Pie</th>
             <th class="text-right">Price</th>
             <th class="text-right">Subtotal</th>
+            <th class="text-right thModificationWidth">Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
             {
                 <tr>
-                    <td class="text-center">@line.Amount</td>
-                    <td class="text-left">@line.Pie.Name</td>
-                    <td class="text-right">@line.Pie.Price.ToString("c")</td>
-                    <td class="text-right">@((line.Amount * line.Pie.Price).ToString("c"))</td>
+                    <td class="text-center ModificationPadding">@line.Amount</td>
+                    <td class="text-left ModificationPadding">@line.Pie.Name</td>
+                    <td class="text-right ModificationPadding">@line.Pie.Price.ToString("c")</td>
+                    <td class="text-right ModificationPadding">@((line.Amount * line.Pie.Price).ToString("c"))</td>
+                    <td class="text-right tagDisplay">  
+                              
+                                <div class="addToCart">
+                                    <p class="button btnModificationMargin">
+                                        <a class="btn btn-info" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-pieId="@line.Pie.PieId">Add to cart</a>
+                                    </p>
+                                </div>
+                                <div class="addToCart"> 
+                                    <p class="button btnModificationMargin">
+                                        <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-pieId="@line.Pie.PieId">Remove to cart</a>
+                                    </p>
+                                </div>  
+                          
+                    </td>
                 </tr>
             }
     </tbody>

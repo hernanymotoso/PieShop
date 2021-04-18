@@ -36,6 +36,9 @@
     padding-left: 10px;
 }
 
+
+
+
 .thumbnail {
     padding: 0;
 }
@@ -90,10 +93,58 @@ footer {
     border-color: #fba1a1 !important;
 }
 
+.btn-info {
+    
+    background-color: #5bc0de !important;
+    border-color: #46b8da !important;
+}
 
 
 
 
+.tagDisplay {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 262px;
+}
+
+@media only screen and (max-width: 630px) {
+    .tagDisplay {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 94px;
+    }
+}
+
+.thModificationWidth {
+    width: 262px;
+}
+
+.btnModificationMargin {
+    margin-bottom: 0px;
+}
+.ModificationPadding{
+    padding-top: 15px !important;
+}
+
+
+
+
+@media only screen and (max-width: 766px) {
+    .btnLoginModification {
+        padding-left: 10px;
+        margin-left: 17px;
+    }
+    .btnLogoutModification {
+        padding-left: 10px;
+        margin-left: 30px;
+    }
+
+    .ItemMenuRegisterModification {
+        padding-left: 30px !important;
+    }
+}
 
 
 
